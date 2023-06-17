@@ -1,0 +1,17 @@
+[
+  {
+    "title": "Test Title 1",
+    "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    "userId": 1
+  },
+  {
+    "title": "Test Title 2",
+    "content": "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    "userId": 2
+  },
+  {
+    "title": "Test Title 3",
+    "content": "It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+    "userId": 3
+  }
+]
