@@ -1,5 +1,10 @@
 const router = require('express').Router();
 const {User, Post, Comment} = require('../../models');
+const bcrypt = require('bcrypt');
+const existsError = {
+    error: true,
+    message: 'An account already exists for the user with this email address',
+};
 
 // localhost/api/user
 // get all users
@@ -17,12 +22,48 @@ router.get("/", async (req, res) => {
     } catch (err) {
         res.status(500).json(err)
     }
-})
+});
 
 // create new user
 router.post('/', async (req, res) => {
+    if (!req.body.email || !req.body.password) {
+        res.status(400).send({
+            error: true,
+            message: 'email or password field are missing',
+        });
+        return;
+    }
+
+    let user = await User.findOne({
+        where: {
+            email: req.body.email.toLowerCase()
+        }
+    });
+    if(user) {
+        res.status(409).send(existsError);
+        return;
+    }
+
+    const email = req.body.email.toLowerCase();
+    const password = req.body.password;
+
+    if(password.length === 0) {
+        res.status(400).send({
+            error: true,
+            message: 'Password cannot be empty',
+        })
+        return;
+    }
+
+    // hash password, store in variable
+    const hash = await bcrypt.hash(password, 10);
+
     try {
-        const data = await User.create(req.body);
+        const data = await User.create({
+            username: req.body.username,
+            email: email,
+            password: hash,
+        });
 
         req.session.save(() => {
             req.session.user_id = data.id;
