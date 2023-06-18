@@ -1,0 +1,29 @@
+<div class="post">
+    <h2> Posts </h2>
+    {{#each post as |post|}}
+        <a href="/post/{{id}}">
+            <h3> {{post.title}} </h3>
+        </a>
+        <p> {{post.content}} </p>
+    {{/each}}
+</div>
+
+<form id='new_post'>
+    <div>
+        <div>
+            <label for='post_title'> Title: </label>
+        </div>
+        <textarea id='post_title' name='post_title' rows='2' cols='35'></textarea>
+    </div>
+    <div>
+        <div>
+            <label for='content'> Content: </label>
+        </div>
+        <textarea id='content' name='content' rows='5' cols='35'></textarea>
+    </div>
+    <div>
+        <button type='submit'> Submit </button>
+    </div>
+</form>
+
+<script src="./js/newPost.js"></script>

@@ -1,0 +1,35 @@
+<div class="post">
+    <div>
+        <h2>{{title}}</h2>
+    </div>
+    <div>
+        <p>{{content}}</p>
+    </div>
+    <button type="button" id="delete"> Delete this post </button>
+</div>
+
+
+<div class="post">
+        <h3>
+            Edit this post:
+        </h3>
+        <form id="edit_post" data-id={{id}}>
+            <div>
+                <label for="title"> Title: </label>
+            </div>
+            <textarea id="title" name="title" rows="2" cols="30">{{title}}</textarea>
+
+            <div>
+                <label for="content"> Content: </label>
+            </div>
+            <textarea id="content" name="content" rows="5" cols="30">{{content}}</textarea>
+
+            <div>
+                <button type="submit"> Save changes </button>
+            </div>
+
+        </form>
+</div>
+
+
+<script src="../js/editPost.js"></script>
