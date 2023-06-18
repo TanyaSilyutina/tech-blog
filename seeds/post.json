@@ -1,17 +1,17 @@
 [
   {
-    "title": "Test Title 1",
-    "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    "title": "Interesting Fact About JavaScript",
+    "content": "You can also use a semicolon at the beginning of a line",
     "userId": 1
   },
   {
-    "title": "Test Title 2",
-    "content": "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    "title": "Interesting Fact About C++",
+    "content": "The name of C++ signifies the evolutionary nature of the changes from C. “++” is the C increment operator.",
     "userId": 2
   },
   {
-    "title": "Test Title 3",
-    "content": "It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+    "title": "Interesting Fact About Golang",
+    "content": "Google wanted an alternative to C++ and this gave rise to the development of the Go programming language.",
     "userId": 3
   }
 ]
