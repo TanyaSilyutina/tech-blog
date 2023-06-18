@@ -6,7 +6,7 @@ const {hash} = require("bcrypt");
 
 const seedDB = async () => {
     const password = await hash("password", 10)
-    await sequelize.sync({force: false});
+    await sequelize.sync({force: true});
 
     await User.bulkCreate(["Linda", "Olga", "Taylor"].map(x =>
         (
