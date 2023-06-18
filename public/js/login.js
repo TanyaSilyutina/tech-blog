@@ -27,8 +27,6 @@ async function handleLogin(e){
 }
 loginEl.addEventListener('submit', handleLogin);
 
-
-
 const handleSignUp = async (e) => {
     e.preventDefault();
 

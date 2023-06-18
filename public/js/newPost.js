@@ -1,4 +1,4 @@
-async function newBlog(e){
+async function newPost(e){
   e.preventDefault();
 
   const title = document.querySelector('#post_title').value;
@@ -22,5 +22,5 @@ async function newBlog(e){
   }
 }
 
-document.querySelector('#new_post').addEventListener('submit', newBlog);
+document.querySelector('#new_post').addEventListener('submit', newPost);
 
